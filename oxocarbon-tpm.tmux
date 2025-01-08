@@ -8,7 +8,7 @@ get_theme() {
 	local option="$1"
 	local default_value="$2"
 	local option_value
-  option_value=$(tmux show-option -gqv "$option")
+    option_value=$(tmux show-option -gqv "$option")
 	if [ -z "$option_value" ]; then
 		echo "$default_value"
 	else
@@ -18,19 +18,19 @@ get_theme() {
 
 main() {
 	local theme
-  theme=$(get_theme "$THEME_OPTION" "$DEFAULT_THEME")
+    theme=$(get_theme "$THEME_OPTION" "$DEFAULT_THEME")
 
-  case "$theme" in
+    case "$theme" in
     "dark")
-      tmux source-file "$CURRENT_DIR/tmux-oxocarbon-dark.conf"
-      ;;
+        tmux source-file "$CURRENT_DIR/tmux-oxocarbon-dark.conf"
+        ;;
     "light")
-      tmux source-file "$CURRENT_DIR/tmux-oxocarbon-light.conf"
-      ;;
+        tmux source-file "$CURRENT_DIR/tmux-oxocarbon-light.conf"
+        ;;
     *)
-      echo "Unknown theme: $theme"
-      ;;
-  esac
+        echo "Unknown theme: $theme"
+        ;;
+    esac
 }
 
 main
