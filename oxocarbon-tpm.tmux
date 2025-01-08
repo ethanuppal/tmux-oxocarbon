@@ -33,4 +33,5 @@ main() {
     esac
 }
 
-main
+# main
+tmux source-file "$CURRENT_DIR/tmux-oxocarbon-dark.conf"
