@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-THEME_OPTION="@tmux-oxocarbon"  # Change this to your theme option
+CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+THEME_OPTION="@tmux_oxocarbon"
 DEFAULT_THEME="dark"
 
 get_theme() {
